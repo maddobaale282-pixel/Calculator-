@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Glossy Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Glossy Calculator</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="calculator-container">
+        <!-- Display Screen -->
+        <div class="screen-container">
+            <input type="text" id="display" readonly placeholder="0">
+        </div>
+
+        <!-- Button Grid -->
+        <div class="keypad">
+            <!-- Top functional row -->
+            <button class="btn clear" onclick="clearDisplay()">C</button>
+            <button class="btn special" onclick="appendValue('Math.sqrt(')">√</button>
+            <button class="btn special" onclick="appendValue('Math.cbrt(')">∛</button>
+            <button class="btn special" onclick="backspace()">⌫</button>
+
+            <!-- Standard numbers and operators mapped to the icon's vibe -->
+            <button class="btn num" onclick="appendValue('7')">7</button>
+            <button class="btn num" onclick="appendValue('8')">8</button>
+            <button class="btn num" onclick="appendValue('9')">9</button>
+            <button class="btn op-plus" onclick="appendValue('+')">+</button>
+
+            <button class="btn num" onclick="appendValue('4')">4</button>
+            <button class="btn num" onclick="appendValue('5')">5</button>
+            <button class="btn num" onclick="appendValue('6')">6</button>
+            <button class="btn op-minus" onclick="appendValue('-')">-</button>
+
+            <button class="btn num" onclick="appendValue('1')">1</button>
+            <button class="btn num" onclick="appendValue('2')">2</button>
+            <button class="btn num" onclick="appendValue('3')">3</button>
+            <button class="btn op-multiply" onclick="appendValue('*')">×</button>
+
+            <button class="btn num" onclick="appendValue('0')">0</button>
+            <button class="btn num" onclick="appendValue('.')">.</button>
+            <button class="btn num" onclick="appendValue('/')">÷</button>
+            <button class="btn op-equal" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<link rel="icon" type="image/png" href="calculator-icon (1).png">
+
+</html>

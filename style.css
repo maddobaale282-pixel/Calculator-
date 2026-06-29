@@ -1,0 +1,87 @@
+body {
+    background-color: #2c2c2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Metallic outer shell mirroring the icon casing */
+.calculator-container {
+    background: linear-gradient(135deg, #ffffff 0%, #dcdcdc 50%, #b0b0b0 100%);
+    padding: 20px;
+    border-radius: 35px;
+    box-shadow: 0px 20px 40px rgba(0,0,0,0.4), inset 0px 2px 5px #fff;
+    width: 90%;
+    max-width: 360px;
+    border: 4px solid #f0f0f0;
+}
+
+/* Glassy Display */
+.screen-container {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: inset 0px 4px 10px rgba(0,0,0,0.8);
+}
+
+#display {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #00ff66;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    text-align: right;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Keypad Layout */
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Base button properties with subtle gloss */
+.btn {
+    border: none;
+    padding: 20px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.1s ease;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Number Buttons & Top Row Utility */
+.num { background: #4a4a4a; }
+.clear { background: #b22222; }
+.special { background: #5a6268; }
+
+/* Quadrant Theme Colors from the Icon */
+.op-plus {
+    background: linear-gradient(to bottom, #c68a4c, #a06730); /* Upper left brown */
+}
+
+.op-minus {
+    background: linear-gradient(to bottom, #8a5729, #643c18); /* Upper right deep brown */
+}
+
+.op-multiply {
+    background: linear-gradient(to bottom, #a06730, #73451c); /* Lower left brown */
+}
+
+.op-equal {
+    background: linear-gradient(to bottom, #f27b35, #d35400); /* Lower right vibrant orange */
+}
